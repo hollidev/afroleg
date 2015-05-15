@@ -39,7 +39,7 @@ public class PlatformScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col) {
-		if (col.gameObject.name != "pallo" && col.gameObject != "laattia") {
+		if (col.gameObject.name != "pallo" && col.gameObject.name != "laattia") {
 			Destroy(gameObject,.5f);
 		}
 	}
