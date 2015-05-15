@@ -15,6 +15,6 @@ public class PlatformScript : MonoBehaviour {
 	void Update () {
 		littleAfro = GameObject.CreatePrimitive(PrimitiveType.Cube);
 
-		littleAfro.transform.position = Vector3 ();
+		//littleAfro.transform.position = Vector3 ();
 	}
 }
