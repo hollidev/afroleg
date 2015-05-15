@@ -1,0 +1,1 @@
+playerprefs tallennetaa yksinkertasta tekstiä, esimerkiksi ne pisteet
