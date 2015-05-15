@@ -1,1 +1,3 @@
 playerprefs tallennetaa yksinkertasta tekstiä, esimerkiksi ne pisteet
+
+Debug.Log ("menee vasemmalle buttoniin"); // tällee voi tehä debuggia konsoliin

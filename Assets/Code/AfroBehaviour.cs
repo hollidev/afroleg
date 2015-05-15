@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AfroBehaviour : MonoBehaviour {
 
-	float speed = 4.0f;
+	float speed = 10.0f;
 	// Use this for initialization
 	void Start () {
 
@@ -14,6 +14,7 @@ public class AfroBehaviour : MonoBehaviour {
 		if (Input.GetKey(KeyCode.LeftArrow))
 		{
 			transform.position += Vector3.left * speed * Time.deltaTime;
+
 		}
 		if (Input.GetKey(KeyCode.RightArrow))
 		{
@@ -27,6 +28,16 @@ public class AfroBehaviour : MonoBehaviour {
 		{
 			transform.position += Vector3.down * speed * Time.deltaTime;
 		}
+
+	}
+
+	public void vasemmalle()
+	{
+
+	}
+
+	public void oikealle()
+	{
 
 	}
 
