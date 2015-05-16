@@ -8,7 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 440430}
-  - 114: {fileID: 11411802}
   - 50: {fileID: 5037212}
   - 212: {fileID: 21262790}
   - 60: {fileID: 6087252}
@@ -26,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 719.868164, y: 568, z: 0}
+  m_LocalPosition: {x: 750.117981, y: 568, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,17 +81,6 @@ PolygonCollider2D:
       - {x: .939999998, y: -.610000014}
       - {x: 1, y: -.349999994}
       - {x: 1, y: .0500000007}
---- !u!114 &11411802
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5561216326a25e341ab172e26ea082e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &21262790
 SpriteRenderer:
   m_ObjectHideFlags: 1

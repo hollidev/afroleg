@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class AfroBehaviour : MonoBehaviour {
-
+	public Text scoreText;
 	float speed = 200.0f;
 	int score;
 	// Use this for initialization
@@ -57,6 +58,8 @@ public class AfroBehaviour : MonoBehaviour {
 			score--;
 			PlayerPrefs.SetInt("gameScore", score);
 		}
+
+		scoreText.text = "" + score;
 	}
 
 
