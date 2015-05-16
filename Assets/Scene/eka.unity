@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51dab29b82624241aed9bf9d793fc9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  littleAfro: {fileID: 413538, guid: 7b5452d8b75d2894096b12f5d4280b87, type: 2}
+  littleAfro: {fileID: 440430, guid: cca70f0ab04ce7d41bd6bd386fb1c692, type: 2}
   platform: {fileID: 1087616643}
 --- !u!4 &672712396
 Transform:

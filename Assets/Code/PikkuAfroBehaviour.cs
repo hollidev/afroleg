@@ -24,8 +24,8 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 			Instantiate(littleAfro);
 			afroCounter++;
 			pos = Random.Range (scale/2*(-1), scale/2);
-			littleAfro.transform.position = new Vector3 (pos,100f);
-			enableGravity(littleAfro);
+			littleAfro.transform.position = new Vector3 (pos,568f);
+			//enableGravity(littleAfro);
 			fallSpeed = Random.Range (1f, 10f);
 			
 		}
@@ -33,11 +33,17 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 
 	void enableGravity(Transform afro)
 	{
-		Rigidbody rb = afro.GetComponent<Rigidbody> ();
-		rb.useGravity = true;
+		Rigidbody2D rb = afro.GetComponent<Rigidbody2D> ();
+		//rb.useGravity = true;
 	}
 
 	void OnCollisionEnter(Collision otherObj)
+	{
+		Debug.Log (otherObj.ToString() + " hit");
+		Destroy (littleAfro, 1f);
+	}
+
+	void OnCollisionEnter2D(Collision2D otherObj)
 	{
 		Debug.Log (otherObj.ToString() + " hit");
 		Destroy (littleAfro, 1f);
