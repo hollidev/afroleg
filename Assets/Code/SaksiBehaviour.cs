@@ -19,14 +19,14 @@ public class SaksiBehaviour : MonoBehaviour {
 	void Update () {
 		updateCounter ++;
 		
-		if (updateCounter % 100 == 0) {
+		if (updateCounter % 200 == 0) {
 			Instantiate(saksi);
 			saksi.tag = "SaksiClone";
 			pos = Random.Range (0, scale);
 			saksi.transform.position = new Vector3 (pos,568f);
 			//enableGravity(littleAfro);
 			//fallSpeed = Random.Range (1f, 10f);
-			Debug.Log ("clone created");
+			Debug.Log ("saksiclone created");
 		}
 	}
 }

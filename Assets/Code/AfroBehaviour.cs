@@ -47,7 +47,10 @@ public class AfroBehaviour : MonoBehaviour {
 
 		if (otherObj.gameObject.tag == "AfroClone") {
 			Destroy (otherObj.gameObject);
-			transform.localScale = transform.localScale+ new Vector3(5f,5f,0f);
+			transform.localScale = transform.localScale + new Vector3 (5f, 5f, 0f);
+		} else if (otherObj.gameObject.tag == "SaksiClone") {
+			Destroy (otherObj.gameObject);
+			transform.localScale = transform.localScale - new Vector3 (10f, 10f, 0f);
 		}
 	}
 

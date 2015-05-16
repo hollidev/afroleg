@@ -20,7 +20,11 @@ public class PlatformScript : MonoBehaviour {
 
 		if (col.gameObject.tag == "AfroClone") {
 			Destroy (col.gameObject, 0.5f);
-			Debug.Log ("clone destroyed");
+			Debug.Log ("afroclone destroyed");
+		}
+		else if (col.gameObject.tag == "SaksiClone") {
+			Destroy (col.gameObject, 0.5f);
+			Debug.Log ("saksiclone destroyed");
 		}
 	}
 

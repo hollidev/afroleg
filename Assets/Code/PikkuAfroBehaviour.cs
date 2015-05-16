@@ -28,7 +28,7 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 			littleAfro.transform.position = new Vector3 (pos,568f);
 			//enableGravity(littleAfro);
 			fallSpeed = Random.Range (1f, 10f);
-			Debug.Log ("clone created");
+			Debug.Log ("afroclone created");
 		}
 	}
 
