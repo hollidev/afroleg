@@ -27,7 +27,7 @@ public class SaksiBehaviour : MonoBehaviour {
 			Transform obj = Instantiate(saksi);
 			GameObject saksiClone = obj.gameObject;
 			rb = saksiClone.GetComponent<Rigidbody2D>();
-			force = Random.Range (1000f,25000f);
+			force = Random.Range (1000f,22000f);
 			rb.AddForce(Vector3.down * force);
 			saksiClone.tag = "SaksiClone";
 			pos = Random.Range (0, scale);

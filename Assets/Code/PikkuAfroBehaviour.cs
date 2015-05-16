@@ -27,7 +27,7 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 			GameObject afroClone = obj.gameObject;
 			littleAfro.tag = "AfroClone";
 			rb = afroClone.GetComponent<Rigidbody2D>();
-			force = Random.Range (1000f,20000f);
+			force = Random.Range (1000f,18000f);
 			rb.AddForce(Vector3.down * force);
 			pos = Random.Range (0, scale);
 			littleAfro.transform.position = new Vector3 (pos,568f);
