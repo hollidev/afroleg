@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5037212}
   - 212: {fileID: 21262790}
   - 60: {fileID: 6087252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: uusiUusiPikkuAfro
   m_TagString: AfroClone
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 888.599854, y: 568, z: 0}
+  m_LocalPosition: {x: 719.868164, y: 568, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
