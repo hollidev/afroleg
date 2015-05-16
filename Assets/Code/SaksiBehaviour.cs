@@ -23,9 +23,9 @@ public class SaksiBehaviour : MonoBehaviour {
 			Instantiate(saksi);
 			saksi.tag = "SaksiClone";
 			pos = Random.Range (0, scale);
-			littleAfro.transform.position = new Vector3 (pos,568f);
+			saksi.transform.position = new Vector3 (pos,568f);
 			//enableGravity(littleAfro);
-			fallSpeed = Random.Range (1f, 10f);
+			//fallSpeed = Random.Range (1f, 10f);
 			Debug.Log ("clone created");
 		}
 	}
