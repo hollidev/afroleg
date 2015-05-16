@@ -7,15 +7,14 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 	public GameObject platform;
 	int updateCounter = 0;
 	float scale;
-	float collisionTime = 0f;
-	float fallSpeed = 0f;
-	Vector3 down;
+	Rigidbody rb;
+	float force;
 
 	float pos;
 
 	void Start () {
 		scale = platform.transform.localScale.x;
-		down = Vector3.down;
+
 
 	}
 	
@@ -23,13 +22,16 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 	void Update () {
 		updateCounter ++;
 		
-		if (updateCounter % 200 == 0) {
-			Instantiate(littleAfro);
+		if (updateCounter % 100 == 0) {
+			Transform obj = Instantiate(littleAfro);
+			GameObject afroClone = obj.gameObject;
 			littleAfro.tag = "AfroClone";
+			rb = afroClone.GetComponent<Rigidbody>();
+			force = Random.Range (1000f,20000f);
+			rb.AddForce(Vector3.down * force);
 			pos = Random.Range (0, scale);
 			littleAfro.transform.position = new Vector3 (pos,568f);
-			Rigidbody rb = littleAfro.GetComponent<Rigidbody>();
-			fallSpeed = Random.Range (10f, 100f);
+
 
 
 			Debug.Log ("afroclone created");
@@ -38,10 +40,5 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 
 	}
 
-	void enableGravity(Transform afro)
-	{
-		Rigidbody2D rb = afro.GetComponent<Rigidbody2D> ();
-		//rb.useGravity = true;
-	}
 	
 }
