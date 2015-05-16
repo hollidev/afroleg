@@ -16,7 +16,11 @@ public class PauseScript : MonoBehaviour {
 						pauseCanvas.enabled = true;
 						Time.timeScale = 0;
 						
-						temp = Time.timeScale;
+						//TODO
+						//jos haluaa et pikkuafrojen tulo loppuu, tähän pitää saaha
+						//semmojen et sieltä luontiscriptistä tarkistetaan onko täällä pause pällä
+
+						temp = Time.timeScale;  //pelkästää timen debukkaukseen käytetään
 						Debug.Log(temp);
 
 					}
@@ -26,7 +30,7 @@ public class PauseScript : MonoBehaviour {
 						pauseCanvas.enabled = false;
 						Time.timeScale = 1;
 						
-				temp = Time.timeScale;
+						temp = Time.timeScale;
 						Debug.Log(temp);
 					}
 				}
