@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Buttons : MonoBehaviour {
+	public Canvas pauseCanvas;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,11 @@ public class Buttons : MonoBehaviour {
 	
 	}
 
+
+/// <summary>
+/// menuvalikon buttonit
+/// </summary>
+
 	public void StartButton(){
 		Application.LoadLevel ("eka"); //start game
 	}
@@ -21,4 +27,8 @@ public class Buttons : MonoBehaviour {
 		Application.Quit (); //exit game
 	}
 
+
+	public void StopButton(){
+		//PauseScript.
+	}
 }
