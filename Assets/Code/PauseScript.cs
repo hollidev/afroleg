@@ -36,5 +36,19 @@ public class PauseScript : MonoBehaviour {
 				}
 	}
 
+	public void ResumeButton(){
+		pauseCanvas.enabled = false;
+	}
+
+	public void RestartButton(){
+		pauseCanvas.enabled = false;
+		Application.LoadLevel("eka");
+	}
+
+	public void MainmenuButton(){
+		Application.LoadLevel("Start_scene");
+	}
+
+
 
 }

@@ -15,9 +15,9 @@ public class Buttons : MonoBehaviour {
 	}
 
 
-/// <summary>
-/// menuvalikon buttonit
-/// </summary>
+	/// <summary>
+	/// menuvalikon buttonit
+	/// </summary>
 
 	public void StartButton(){
 		Application.LoadLevel ("eka"); //start game
@@ -27,8 +27,11 @@ public class Buttons : MonoBehaviour {
 		Application.Quit (); //exit game
 	}
 
-
+	/// <summary>
+	/// Gamebuttons
+	/// </summary>
 	public void StopButton(){
-		//PauseScript.
+		pauseCanvas.enabled = true;
+		Time.timeScale = 0;
 	}
 }
