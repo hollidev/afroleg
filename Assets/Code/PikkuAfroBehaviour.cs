@@ -7,7 +7,7 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 	public GameObject platform;
 	int updateCounter = 0;
 	float scale;
-	Rigidbody rb;
+	Rigidbody2D rb;
 	float force;
 
 	float pos;
@@ -26,7 +26,7 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 			Transform obj = Instantiate(littleAfro);
 			GameObject afroClone = obj.gameObject;
 			littleAfro.tag = "AfroClone";
-			rb = afroClone.GetComponent<Rigidbody>();
+			rb = afroClone.GetComponent<Rigidbody2D>();
 			force = Random.Range (1000f,20000f);
 			rb.AddForce(Vector3.down * force);
 			pos = Random.Range (0, scale);

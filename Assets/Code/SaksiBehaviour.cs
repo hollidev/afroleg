@@ -4,7 +4,7 @@ using System.Collections;
 public class SaksiBehaviour : MonoBehaviour {
 	public Transform saksi;
 	public GameObject platform;
-	Rigidbody rb;
+	Rigidbody2D rb;
 	int updateCounter = 0;
 	float scale;
 	float drag;
@@ -26,7 +26,7 @@ public class SaksiBehaviour : MonoBehaviour {
 		if (updateCounter % 200 == 0) {
 			Transform obj = Instantiate(saksi);
 			GameObject saksiClone = obj.gameObject;
-			rb = saksiClone.GetComponent<Rigidbody>();
+			rb = saksiClone.GetComponent<Rigidbody2D>();
 			force = Random.Range (1000f,25000f);
 			rb.AddForce(Vector3.down * force);
 			saksiClone.tag = "SaksiClone";

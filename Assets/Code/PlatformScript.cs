@@ -16,7 +16,8 @@ public class PlatformScript : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter(Collision col) {
+	void OnCollisionEnter2D(Collision2D col) {
+		Debug.Log ("collision2D");
 
 		if (col.gameObject.tag == "AfroClone") {
 			Destroy (col.gameObject, 0.5f);

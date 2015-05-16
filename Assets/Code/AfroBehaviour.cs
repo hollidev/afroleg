@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AfroBehaviour : MonoBehaviour {
 
-	float speed = 100.0f;
+	float speed = 150.0f;
 	int score;
 	// Use this for initialization
 	void Start () {
@@ -23,11 +23,11 @@ public class AfroBehaviour : MonoBehaviour {
 		}
 		if (Input.GetKey(KeyCode.UpArrow))
 		{
-			transform.position += Vector3.up * speed * Time.deltaTime;
+			//transform.position += Vector3.up * speed * Time.deltaTime;
 		}
 		if (Input.GetKey(KeyCode.DownArrow))
 		{
-			transform.position += Vector3.down * speed * Time.deltaTime;
+			//transform.position += Vector3.down * speed * Time.deltaTime;
 		}
 
 	}
@@ -42,7 +42,7 @@ public class AfroBehaviour : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter(Collision otherObj)
+	void OnCollisionEnter2D(Collision2D otherObj)
 	{
 		Debug.Log ("afro hit " + otherObj.gameObject.ToString ());
 
