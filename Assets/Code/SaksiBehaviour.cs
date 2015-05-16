@@ -21,6 +21,8 @@ public class SaksiBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(PauseScript.seis==false){
+
 		updateCounter ++;
 		
 		if (updateCounter % 200 == 0) {
@@ -35,7 +37,7 @@ public class SaksiBehaviour : MonoBehaviour {
 			Debug.Log ("saksiclone created");
 
 		}
-
+		}
 
 	}
 

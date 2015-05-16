@@ -4,6 +4,9 @@ using System.Collections;
 public class PauseScript : MonoBehaviour {
 	
 	public Canvas pauseCanvas;
+
+	public static bool seis = false;
+
 	void Start(){
 		pauseCanvas.enabled = false;
 	}
@@ -16,9 +19,8 @@ public class PauseScript : MonoBehaviour {
 						pauseCanvas.enabled = true;
 						Time.timeScale = 0;
 						
-						//TODO
-						//jos haluaa et pikkuafrojen tulo loppuu, tähän pitää saaha
-						//semmojen et sieltä luontiscriptistä tarkistetaan onko täällä pause pällä
+
+						seis = true;
 						
 
 						temp = Time.timeScale;  //pelkästää timen debukkaukseen käytetään
@@ -30,6 +32,8 @@ public class PauseScript : MonoBehaviour {
 					{
 						pauseCanvas.enabled = false;
 						Time.timeScale = 1;
+
+						seis = false;
 						
 						temp = Time.timeScale;
 						Debug.Log(temp);
@@ -37,8 +41,11 @@ public class PauseScript : MonoBehaviour {
 				}
 	}
 
+
 	public void ResumeButton(){
 		pauseCanvas.enabled = false;
+		seis = false;
+		Debug.Log("resumen lopussa");
 	}
 
 	public void RestartButton(){

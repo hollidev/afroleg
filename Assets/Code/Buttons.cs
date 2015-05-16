@@ -41,5 +41,6 @@ public class Buttons : MonoBehaviour {
 	public void StopButton(){
 		pauseCanvas.enabled = true;
 		Time.timeScale = 0;
+		PauseScript.seis=true;
 	}
 }

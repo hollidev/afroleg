@@ -17,9 +17,12 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 
 
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
+
+		if(PauseScript.seis == false){
 		updateCounter ++;
 		
 		if (updateCounter % 100 == 0) {
@@ -36,7 +39,7 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 
 			Debug.Log ("afroclone created");
 		}
-
+		}
 
 	}
 
