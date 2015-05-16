@@ -15,8 +15,7 @@ public class PikkuAfroScript : MonoBehaviour {
 
 	void OnCollisionEnter(Collision otherObj)
 	{
-		Debug.Log (otherObj.gameObject.ToString() + " hit");
-		Destroy ();
+
 	}
 
 }

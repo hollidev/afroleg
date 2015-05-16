@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AfroBehaviour : MonoBehaviour {
 
-	float speed = 10.0f;
+	float speed = 100.0f;
 	// Use this for initialization
 	void Start () {
 
@@ -39,6 +39,16 @@ public class AfroBehaviour : MonoBehaviour {
 	public void oikealle()
 	{
 
+	}
+
+	void OnCollisionEnter(Collision otherObj)
+	{
+		Debug.Log ("afro hit " + otherObj.gameObject.ToString ());
+
+		if (otherObj.gameObject.tag == "AfroClone") {
+			Destroy (otherObj.gameObject);
+			transform.localScale = transform.localScale+ new Vector3(5f,5f,0f);
+		}
 	}
 
 

@@ -18,6 +18,10 @@ public class PlatformScript : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 
+		if (col.gameObject.tag == "AfroClone") {
+			Destroy (col.gameObject, 0.5f);
+			Debug.Log ("clone destroyed");
+		}
 	}
 
 

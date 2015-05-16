@@ -14,6 +14,7 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 
 	void Start () {
 		scale = platform.transform.localScale.x;
+
 	}
 	
 	// Update is called once per frame
@@ -22,12 +23,13 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 		
 		if (updateCounter % 100 == 0) {
 			Instantiate(littleAfro);
+			littleAfro.tag = "AfroClone";
 			afroCounter++;
-			pos = Random.Range (scale/2*(-1), scale/2);
+			pos = Random.Range (0, scale);
 			littleAfro.transform.position = new Vector3 (pos,568f);
 			//enableGravity(littleAfro);
 			fallSpeed = Random.Range (1f, 10f);
-			
+			Debug.Log ("clone created");
 		}
 	}
 
@@ -36,16 +38,5 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 		Rigidbody2D rb = afro.GetComponent<Rigidbody2D> ();
 		//rb.useGravity = true;
 	}
-
-	void OnCollisionEnter(Collision otherObj)
-	{
-		Debug.Log (otherObj.ToString() + " hit");
-		Destroy (littleAfro, 1f);
-	}
-
-	void OnCollisionEnter2D(Collision2D otherObj)
-	{
-		Debug.Log (otherObj.ToString() + " hit");
-		Destroy (littleAfro, 1f);
-	}
+	
 }
