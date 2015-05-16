@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AfroBehaviour : MonoBehaviour {
 
-	float speed = 150.0f;
+	float speed = 200.0f;
 	int score;
 	// Use this for initialization
 	void Start () {
@@ -53,7 +53,7 @@ public class AfroBehaviour : MonoBehaviour {
 			PlayerPrefs.SetInt("gameScore", score);
 		} else if (otherObj.gameObject.tag == "SaksiClone") {
 			Destroy (otherObj.gameObject);
-			transform.localScale = transform.localScale - new Vector3 (10f, 10f, 0f);
+			transform.localScale = transform.localScale - new Vector3 (20f, 20f, 0f);
 			score--;
 			PlayerPrefs.SetInt("gameScore", score);
 		}
