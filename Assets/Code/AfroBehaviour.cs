@@ -6,21 +6,26 @@ public class AfroBehaviour : MonoBehaviour {
 	public Text scoreText;
 	float speed = 200.0f;
 	int score;
+	private Animator animator;
 	// Use this for initialization
 	void Start () {
-
+		animator = this.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey(KeyCode.LeftArrow))
 		{
+			animator.SetInteger("direction", 0);
+
 			transform.position += Vector3.left * speed * Time.deltaTime;
 
 		}
 		if (Input.GetKey(KeyCode.RightArrow))
 		{
+			animator.SetInteger("direction", 1);
 			transform.position += Vector3.right * speed * Time.deltaTime;
+
 		}
 		if (Input.GetKey(KeyCode.UpArrow))
 		{
