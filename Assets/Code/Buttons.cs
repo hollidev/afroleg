@@ -23,8 +23,16 @@ public class Buttons : MonoBehaviour {
 		Application.LoadLevel ("eka"); //start game
 	}
 
+	public void MainMenu_Button(){
+		Application.LoadLevel ("Start_scene");
+	}
+
 	public void ExitButton(){
 		Application.Quit (); //exit game
+	}
+
+	public void ScoreButton(){
+		Application.LoadLevel("Score_scene");
 	}
 
 	/// <summary>

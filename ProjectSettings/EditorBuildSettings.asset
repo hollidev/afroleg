@@ -9,3 +9,7 @@ EditorBuildSettings:
     path: Assets/Scene/Start_scene.unity
   - enabled: 1
     path: Assets/Scene/eka.unity
+  - enabled: 1
+    path: Assets/Scene/Score_scene.unity
+  - enabled: 1
+    path: Assets/Scene/End_scene.unity
