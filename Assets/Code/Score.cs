@@ -7,6 +7,10 @@ public class Score : MonoBehaviour {
 
 	void Start(){
 		scoreCanvas.enabled = false;
+
+		//TODO
+		//tarkistaa onko pistemäärä riittävän suuri tilastolle pääsyyn, jos on
+		//pitää canvas enabloida
 	}
 	
 	void Update()
