@@ -40,11 +40,13 @@ public class AfroBehaviour : MonoBehaviour {
 
 	public void vasemmalle()
 	{
+		transform.position += Vector3.left * speed * Time.deltaTime;
 
 	}
 
 	public void oikealle()
 	{
+		transform.position += Vector3.right * speed * Time.deltaTime;
 
 	}
 

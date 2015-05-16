@@ -44,9 +44,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 1.5
+  m_TransitionDuration: 2.49428535
   m_TransitionOffset: 0
-  m_ExitTime: 0
+  m_ExitTime: 1.00571477
   m_HasExitTime: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -67,9 +67,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 1.5
+  m_TransitionDuration: 1.00971425
   m_TransitionOffset: 0
-  m_ExitTime: 0
+  m_ExitTime: 7.55126073e-10
   m_HasExitTime: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -81,7 +81,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SaksiAnim1
-  m_Speed: 1
+  m_Speed: .5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110146142}
@@ -89,7 +89,7 @@ AnimatorState:
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
-  m_Mirror: 0
+  m_Mirror: 1
   m_Motion: {fileID: 7400000, guid: a4dea97d5649f304c9e47c445e8f5758, type: 2}
   m_Tag: 
 --- !u!1102 &110218142
@@ -99,7 +99,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SaksiAnim2
-  m_Speed: 1
+  m_Speed: .5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110162398}
@@ -108,7 +108,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 19ea1226279925744a49656648f471e1, type: 2}
+  m_Motion: {fileID: 7400000, guid: a4dea97d5649f304c9e47c445e8f5758, type: 2}
   m_Tag: 
 --- !u!1107 &110772070
 AnimatorStateMachine:

@@ -19,6 +19,7 @@ public class PauseScript : MonoBehaviour {
 						//TODO
 						//jos haluaa et pikkuafrojen tulo loppuu, tähän pitää saaha
 						//semmojen et sieltä luontiscriptistä tarkistetaan onko täällä pause pällä
+						
 
 						temp = Time.timeScale;  //pelkästää timen debukkaukseen käytetään
 						Debug.Log(temp);
