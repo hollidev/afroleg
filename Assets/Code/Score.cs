@@ -8,21 +8,13 @@ public class Score : MonoBehaviour {
 	int score;
 	int highScore;
 	public Text scoreText;
-	//public Text[] pisteet;
-	
 
 	void Start(){
 		scoreCanvas.enabled = false;
+		Hashtable test;
 
 		score = PlayerPrefs.GetInt ("endScore");
 		Debug.Log ("Endscore: " + score);
-
-		scoreText.text = "" + score;
-
-
-		//TODO
-		//tarkistaa onko pistemäärä riittävän suuri tilastolle pääsyyn, jos on
-		//pitää canvas enabloida
 
 		/*int pistemaara;
 		Debug.Log("int pisteille luotu, ei vielä for luuppiin"+pisteet.Length);
@@ -41,6 +33,9 @@ public class Score : MonoBehaviour {
 
 		for(int i=9; i>-1; i--)
 		{
+
+
+
 			//Debug.Log("silmukan sisällä");
 			/*tämä on vain sitä varten, että sain jotain lukuja noihin muisteihin
 			 * 
@@ -56,6 +51,7 @@ public class Score : MonoBehaviour {
 			asetusmuisti = asetusmuisti++;
 			Debug.Log (asetusmuisti);*/
 
+		
 
 			key = "key" + i;
 			keyscore = PlayerPrefs.GetInt(key);
@@ -75,6 +71,7 @@ public class Score : MonoBehaviour {
 					key="key"+j;
 					toinen="key"+j++;
 					PlayerPrefs.SetInt(key, PlayerPrefs.GetInt(toinen));
+					Debug.Log ("for j loopattu");
 					}
 
 				//tallennetaan muistipaikkaan score
@@ -88,6 +85,10 @@ public class Score : MonoBehaviour {
 
 	}
 
+	void populateScoreMap()
+	{
+
+	}
 
 
 	void Update()

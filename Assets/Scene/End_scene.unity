@@ -1155,10 +1155,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 918225264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a6bbabc7a795a4495c88c2cef0b250, type: 3}
+  m_Script: {fileID: 11500000, guid: bf3b6ad4d47fe4a43b7b8a45cc1b4c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreCanvas: {fileID: 843304873}
   scoreText: {fileID: 572193082}
 --- !u!1 &1328690286
 GameObject:

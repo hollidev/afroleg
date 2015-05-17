@@ -28,7 +28,6 @@ GameObject:
   - 224: {fileID: 22476276}
   - 222: {fileID: 22281810}
   - 114: {fileID: 11493598}
-  - 114: {fileID: 11413892}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -87,17 +86,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &11413892
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11415938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -244,7 +232,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: testestetst
 --- !u!222 &22219306
 CanvasRenderer:
   m_ObjectHideFlags: 1
