@@ -1,0 +1,10 @@
+diff a/Assets/Code/Score.cs b/Assets/Code/Score.cs	(rejected hunks)
+@@ -17,7 +17,7 @@
+ 		//tarkistaa onko pistemäärä riittävän suuri tilastolle pääsyyn, jos on
+ 		//pitää canvas enabloida
+ 
+-		scoreText.text = "" + score;
++		scoreText.text = "Score: " + score;
+ 	}
+ 	
+ 	void Update()

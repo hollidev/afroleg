@@ -7,7 +7,7 @@ public class AfroBehaviour : MonoBehaviour {
 	public GameObject[] lives;
 	float speed = 300.0f;
 	int score;
-	int saksiHitCounter;
+	int saksiHitCounter = 0;
 	public GameObject platform;
 	Vector3 rightEdge;
 	Vector3 leftEdge;
@@ -16,6 +16,9 @@ public class AfroBehaviour : MonoBehaviour {
 	bool onRightSide;
 	float center;
 	float y;
+	int growCounter = 0;
+	int currentLives = 3;
+	Vector3 originalScale;
 
 	private Animator animator;
 	// Use this for initialization
@@ -23,6 +26,7 @@ public class AfroBehaviour : MonoBehaviour {
 		animator = this.GetComponent<Animator>();
 		renderer = GetComponent<SpriteRenderer> ();
 		center = platform.transform.position.x;
+		originalScale = transform.localScale;
 	}
 	
 	// Update is called once per frame
@@ -92,32 +96,52 @@ public class AfroBehaviour : MonoBehaviour {
 
 		if (otherObj.gameObject.tag == "AfroClone") {
 			Destroy (otherObj.gameObject);
-			transform.localScale = transform.localScale + new Vector3 (3f, 3f, 0f);
+
+			growCounter++;
+
+			if(growCounter < 5)
+				transform.localScale = transform.localScale + new Vector3 (3f, 3f, 0f);
+			else if(growCounter == 5 && currentLives < 3)
+			{
+				addLife();
+				growCounter = 0;
+
+			}
+
+
+
 			score++;
 		} else if (otherObj.gameObject.tag == "SaksiClone") {
-			saksiHitCounter++;
+			currentLives--;
+			transform.localScale = transform.localScale - new Vector3 (5f, 5f, 0f);
 			Destroy (otherObj.gameObject);
-			transform.localScale = transform.localScale - new Vector3 (10f, 10f, 0f);
-
-			transform.localScale = transform.localScale*(-0.70f);
 			score--;
 
-			removeLife (saksiHitCounter);
+			removeLife (currentLives);
 		}
 
 		scoreText.text = "" + score;
 	}
 
-	void removeLife(int c)
+	void removeLife(int nOfLives)
 	{
-		if (c < 4)
+		if (nOfLives < 3)
 		{
-			Destroy (lives [3 - c]);
-		
+			lives [nOfLives].SetActive(false);
+			growCounter = 0;
+			transform.localScale = originalScale;
 		} 
 
-		if(c==3)
+		if(nOfLives==0)
 			endGame ();
+	}
+
+	void addLife()
+	{
+		currentLives++;
+		lives [currentLives-1].SetActive(true);
+
+
 	}
 
 	void endGame()

@@ -32,7 +32,6 @@ public class SaksiBehaviour : MonoBehaviour {
 			rb = saksiClone.GetComponent<Rigidbody2D>();
 			force = Random.Range (1000f,22000f);
 			scaleMultiplier = Random.Range (0f,2f);
-				Debug.Log ("multiplier " + scaleMultiplier);
 			rb.AddForce(Vector3.down * force);
 			saksiClone.transform.localScale += saksiClone.transform.localScale*scaleMultiplier;
 			saksiClone.tag = "SaksiClone";
