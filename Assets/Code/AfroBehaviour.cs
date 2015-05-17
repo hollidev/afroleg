@@ -99,9 +99,9 @@ public class AfroBehaviour : MonoBehaviour {
 
 			growCounter++;
 
-			if(growCounter < 5)
+			if(growCounter < 15)
 				transform.localScale = transform.localScale + new Vector3 (3f, 3f, 0f);
-			else if(growCounter == 5 && currentLives < 3)
+			else if(growCounter == 15 && currentLives < 3)
 			{
 				addLife();
 				growCounter = 0;
@@ -115,7 +115,6 @@ public class AfroBehaviour : MonoBehaviour {
 			currentLives--;
 			transform.localScale = transform.localScale - new Vector3 (5f, 5f, 0f);
 			Destroy (otherObj.gameObject);
-			score--;
 
 			removeLife (currentLives);
 		}
@@ -130,6 +129,7 @@ public class AfroBehaviour : MonoBehaviour {
 			lives [nOfLives].SetActive(false);
 			growCounter = 0;
 			transform.localScale = originalScale;
+			updateAnimatorLives (currentLives);
 		} 
 
 		if(nOfLives==0)
@@ -140,7 +140,7 @@ public class AfroBehaviour : MonoBehaviour {
 	{
 		currentLives++;
 		lives [currentLives-1].SetActive(true);
-
+		updateAnimatorLives (currentLives);
 
 	}
 
@@ -169,6 +169,11 @@ public class AfroBehaviour : MonoBehaviour {
 		y = transform.position.y;
 		leftEdge = new Vector3 (0, y, 0);
 		transform.position = leftEdge;
+	}
+
+	void updateAnimatorLives(int n)
+	{
+		animator.SetInteger("lives", n);
 	}
 
 }
