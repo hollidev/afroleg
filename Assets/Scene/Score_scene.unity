@@ -559,7 +559,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 'NOOB
+
+'
 --- !u!222 &525186022
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -894,7 +896,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 'NOOB
+
+'
 --- !u!222 &854289446
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -960,7 +964,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 'NOOB
+
+'
 --- !u!222 &863401227
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1121,7 +1127,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 'NOOB
+
+'
 --- !u!222 &1013517239
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1187,7 +1195,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 'NOOB
+
+'
 --- !u!222 &1075179104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1253,7 +1263,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 'NOOB
+
+'
 --- !u!222 &1078660453
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1457,7 +1469,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 'NOOB
+
+'
 --- !u!222 &1303567246
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1797,7 +1811,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 'NOOB
+
+'
 --- !u!222 &1407283350
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1863,7 +1879,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 'NOOB
+
+'
 --- !u!222 &1499922831
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2313,7 +2331,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 'NOOB
+
+'
 --- !u!222 &1951013676
 CanvasRenderer:
   m_ObjectHideFlags: 0
