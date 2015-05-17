@@ -109,7 +109,7 @@ public class AfroBehaviour : MonoBehaviour {
 	{
 		if (c < 4)
 		{
-			Destroy (lives [c - 1]);
+			Destroy (lives [3 - c]);
 		
 		} 
 
