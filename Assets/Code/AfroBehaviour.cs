@@ -4,8 +4,11 @@ using System.Collections;
 
 public class AfroBehaviour : MonoBehaviour {
 	public Text scoreText;
+	public GameObject[] lives;
 	float speed = 300.0f;
 	int score;
+	int saksiHitCounter;
+
 	private Animator animator;
 	// Use this for initialization
 	void Start () {
@@ -58,16 +61,33 @@ public class AfroBehaviour : MonoBehaviour {
 			Destroy (otherObj.gameObject);
 			transform.localScale = transform.localScale + new Vector3 (5f, 5f, 0f);
 			score++;
-			PlayerPrefs.SetInt("gameScore", score);
 		} else if (otherObj.gameObject.tag == "SaksiClone") {
 			Destroy (otherObj.gameObject);
 			transform.localScale = transform.localScale - new Vector3 (20f, 20f, 0f);
 			score--;
-			PlayerPrefs.SetInt("gameScore", score);
+			saksiHitCounter++;
+			removeLife (saksiHitCounter);
 		}
 
 		scoreText.text = "" + score;
 	}
 
+	void removeLife(int c)
+	{
+		if (c < 4)
+		{
+			Destroy (lives [c - 1]);
+		
+		} 
+
+		if(c==3)
+			endGame ();
+	}
+
+	void endGame()
+	{
+		PlayerPrefs.SetInt ("endScore", score);
+		Application.LoadLevel ("End_scene");
+	}
 
 }

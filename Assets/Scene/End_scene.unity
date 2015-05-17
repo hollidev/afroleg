@@ -1044,6 +1044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreCanvas: {fileID: 843304873}
+  scoreText: {fileID: 572193082}
 --- !u!1 &1328690286
 GameObject:
   m_ObjectHideFlags: 0

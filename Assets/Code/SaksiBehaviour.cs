@@ -25,7 +25,7 @@ public class SaksiBehaviour : MonoBehaviour {
 
 		updateCounter ++;
 		
-		if (updateCounter % 200 == 0) {
+		if (updateCounter % 10 == 0) {
 			Transform obj = Instantiate(saksi);
 			GameObject saksiClone = obj.gameObject;
 			rb = saksiClone.GetComponent<Rigidbody2D>();

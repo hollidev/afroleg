@@ -12,7 +12,7 @@ public class RightButtonBehaviour : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButton (0)) {
 			afro.transform.position += Vector3.right * 200f * Time.deltaTime;
-			Debug.Log ("Mouse pressed");
+
 		}
 
 	}
