@@ -95,10 +95,13 @@ public class AfroBehaviour : MonoBehaviour {
 			transform.localScale = transform.localScale + new Vector3 (3f, 3f, 0f);
 			score++;
 		} else if (otherObj.gameObject.tag == "SaksiClone") {
-			Destroy (otherObj.gameObject);
-			transform.localScale = transform.localScale - new Vector3 (15f, 15f, 0f);
-			score--;
 			saksiHitCounter++;
+			Destroy (otherObj.gameObject);
+			transform.localScale = transform.localScale - new Vector3 (10f, 10f, 0f);
+
+			transform.localScale = transform.localScale*(-0.70f);
+			score--;
+
 			removeLife (saksiHitCounter);
 		}
 
@@ -119,7 +122,14 @@ public class AfroBehaviour : MonoBehaviour {
 
 	void endGame()
 	{
+		animator.SetTrigger ("died");
 		PlayerPrefs.SetInt ("endScore", score);
+		StartCoroutine ("goToScoreScreen");
+	}
+
+	IEnumerator goToScoreScreen()
+	{
+		yield return new WaitForSeconds (2.0f);
 		Application.LoadLevel ("End_scene");
 	}
 
