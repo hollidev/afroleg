@@ -10,23 +10,15 @@ public class H_Score : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		string key = "key";
-		//int luku;
+		string key = "highScore";
+
 		string lukuS;
 
-		for(int i=9; i>-1; i--)
+		for(int i=1; i<=10; i++)
 		{
-			
-			key = "key" + i;
-
-			//luku = PlayerPrefs.GetInt(key);
-
+			key = "highScore" + i;
 			lukuS = PlayerPrefs.GetInt(key).ToString();
-
-			pisteet[i].text = lukuS;
-
-			Debug.Log("pisteideksi: " + pisteet[i] + "tallennettu muisti: " + lukuS);
-
+			pisteet[i-1].text = lukuS;
 		}
 	}
 	
