@@ -12,10 +12,14 @@ public class ScoreNew : MonoBehaviour {
 		ArrayList list = new ArrayList ();
 		int score = PlayerPrefs.GetInt ("endScore");
 
+
 		for (int i = 1; i<=10; i++) {
 			key = "highScore" + i;
 			keyscore = PlayerPrefs.GetInt(key);
 			list.Add(keyscore);
+
+
+			//PlayerPrefs.SetInt (key, 0);
 		}
 
 		lowestScore = PlayerPrefs.GetInt ("highScore10");

@@ -160,7 +160,7 @@ public class AfroBehaviour : MonoBehaviour {
 	void teleportToRightEdge()
 	{
 		y = transform.position.y;
-		rightEdge = new Vector3 (1150, y, 0);
+		rightEdge = new Vector3 (957, y, 0);
 		transform.position = rightEdge;
 	}
 
