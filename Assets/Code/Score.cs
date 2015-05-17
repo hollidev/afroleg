@@ -37,14 +37,25 @@ public class Score : MonoBehaviour {
 		string key = "key";
 		int keyscore;
 
+		//Debug.Log("ennen silmukkaa");
+
 		for(int i=9; i>-1; i--)
 		{
+			//Debug.Log("silmukan sisällä");
 			/*tämä on vain sitä varten, että sain jotain lukuja noihin muisteihin
 			 * 
 			key = "key" + i;
 			Debug.Log(key);
 			PlayerPrefs.SetInt (key, asetusmuisti);
-			asetusmuisti = asetusmuisti + 5;*/
+			asetusmuisti = asetusmuisti + 5;
+
+			key = "key" + i;
+			Debug.Log("tallennusindeksi" + key);
+
+			PlayerPrefs.SetInt (key, asetusmuisti);
+			asetusmuisti = asetusmuisti++;
+			Debug.Log (asetusmuisti);*/
+
 
 			key = "key" + i;
 			keyscore = PlayerPrefs.GetInt(key);
@@ -69,6 +80,7 @@ public class Score : MonoBehaviour {
 				//tallennetaan muistipaikkaan score
 				key = "key" + i;
 				PlayerPrefs.SetInt(key, score);
+				i = -2;
 			}
 
 		}
