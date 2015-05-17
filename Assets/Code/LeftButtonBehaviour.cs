@@ -10,9 +10,10 @@ public class LeftButtonBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButton(0))
-			afro.transform.position += Vector3.left * 200f * Time.deltaTime;
-		
+		for (int i = 0; i < Input.touchCount; ++i) {
+			//if (Input.GetTouch(i).phase == TouchPhase.Began)
+			afro.transform.position += Vector3.left * 300f * Time.deltaTime;
+		}
 	}
 
 

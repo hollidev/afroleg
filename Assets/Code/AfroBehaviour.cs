@@ -19,6 +19,7 @@ public class AfroBehaviour : MonoBehaviour {
 	int growCounter = 0;
 	int currentLives = 3;
 	Vector3 originalScale;
+	bool inAir = false;
 
 	private Animator animator;
 	// Use this for initialization
@@ -47,6 +48,8 @@ public class AfroBehaviour : MonoBehaviour {
 		if (Input.GetKey(KeyCode.UpArrow))
 		{
 			//transform.position += Vector3.up * speed * Time.deltaTime;
+
+			jump();
 		}
 		if (Input.GetKey(KeyCode.DownArrow))
 		{
@@ -78,6 +81,15 @@ public class AfroBehaviour : MonoBehaviour {
 		}
 
 	}
+
+	void jump()
+	{
+		if (inAir == false) {
+			inAir = true;
+			GetComponent<Rigidbody2D> ().AddForce (Vector3.up * 15000f);
+		}
+
+	}
 	
 	public void vasemmalle()
 	{
@@ -87,7 +99,7 @@ public class AfroBehaviour : MonoBehaviour {
 
 	public void oikealle()
 	{
-		transform.position += Vector3.right * speed * Time.deltaTime;
+		//transform.position += Vector3.right * speed * Time.deltaTime;
 
 	}
 
@@ -99,15 +111,13 @@ public class AfroBehaviour : MonoBehaviour {
 
 			growCounter++;
 
-			if(growCounter < 15)
+			if (growCounter < 15)
 				transform.localScale = transform.localScale + new Vector3 (3f, 3f, 0f);
-			else if(growCounter == 15 && currentLives < 3)
-			{
-				addLife();
+			else if (growCounter == 15 && currentLives < 3) {
+				addLife ();
 				growCounter = 0;
 
 			}
-
 
 
 			score++;
@@ -117,9 +127,12 @@ public class AfroBehaviour : MonoBehaviour {
 			Destroy (otherObj.gameObject);
 
 			removeLife (currentLives);
-		}
+		} else if (otherObj.gameObject.tag == "platform")
+			inAir = false;
 
 		scoreText.text = "" + score;
+
+
 	}
 
 	void removeLife(int nOfLives)
@@ -160,7 +173,7 @@ public class AfroBehaviour : MonoBehaviour {
 	void teleportToRightEdge()
 	{
 		y = transform.position.y;
-		rightEdge = new Vector3 (957, y, 0);
+		rightEdge = new Vector3 (1147, y, 0);
 		transform.position = rightEdge;
 	}
 

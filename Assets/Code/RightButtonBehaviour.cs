@@ -10,9 +10,10 @@ public class RightButtonBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButton (0)) {
-			afro.transform.position += Vector3.right * 200f * Time.deltaTime;
 
+		for (int i = 0; i < Input.touchCount; ++i) {
+			//if (Input.GetTouch(i).phase == TouchPhase.Began)
+				afro.transform.position += Vector3.right * 300f * Time.deltaTime;
 		}
 
 	}

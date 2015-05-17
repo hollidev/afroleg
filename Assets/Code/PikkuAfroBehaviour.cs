@@ -32,7 +32,7 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 			rb = afroClone.GetComponent<Rigidbody2D>();
 			force = Random.Range (1000f,18000f);
 			rb.AddForce(Vector3.down * force);
-			pos = Random.Range (0, scale);
+			pos = Random.Range (0, 1150);
 			littleAfro.transform.position = new Vector3 (pos,568f);
 		}
 		}

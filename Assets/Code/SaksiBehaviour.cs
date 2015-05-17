@@ -35,7 +35,7 @@ public class SaksiBehaviour : MonoBehaviour {
 			rb.AddForce(Vector3.down * force);
 			saksiClone.transform.localScale += saksiClone.transform.localScale*scaleMultiplier;
 			saksiClone.tag = "SaksiClone";
-			pos = Random.Range (0, scale);
+			pos = Random.Range (0, 1150);
 			saksiClone.transform.position = new Vector3 (pos,568f);
 		}
 		}
