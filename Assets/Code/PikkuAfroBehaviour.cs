@@ -34,10 +34,6 @@ public class PikkuAfroBehaviour : MonoBehaviour {
 			rb.AddForce(Vector3.down * force);
 			pos = Random.Range (0, scale);
 			littleAfro.transform.position = new Vector3 (pos,568f);
-
-
-
-			Debug.Log ("afroclone created");
 		}
 		}
 

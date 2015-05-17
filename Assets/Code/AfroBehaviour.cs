@@ -8,11 +8,21 @@ public class AfroBehaviour : MonoBehaviour {
 	float speed = 300.0f;
 	int score;
 	int saksiHitCounter;
+	public GameObject platform;
+	Vector3 rightEdge;
+	Vector3 leftEdge;
+	Renderer renderer;
+	bool onLeftSide;
+	bool onRightSide;
+	float center;
+	float y;
 
 	private Animator animator;
 	// Use this for initialization
 	void Start () {
 		animator = this.GetComponent<Animator>();
+		renderer = GetComponent<SpriteRenderer> ();
+		center = platform.transform.position.x;
 	}
 	
 	// Update is called once per frame
@@ -39,8 +49,32 @@ public class AfroBehaviour : MonoBehaviour {
 			//transform.position += Vector3.down * speed * Time.deltaTime;
 		}
 
-	}
 
+		if (!(renderer.isVisible))
+		{
+			if(onLeftSide == true)
+			{
+				teleportToRightEdge();
+			}
+			else
+			{
+				teleportToLeftEdge();
+			}
+
+		}
+
+		if (transform.position.x < center) {
+			onLeftSide = true;
+			onRightSide = false;
+		}
+		else if(transform.position.x >= center)
+		{
+			onRightSide = true;
+			onLeftSide = false;
+		}
+
+	}
+	
 	public void vasemmalle()
 	{
 		transform.position += Vector3.left * speed * Time.deltaTime;
@@ -55,15 +89,14 @@ public class AfroBehaviour : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D otherObj)
 	{
-		Debug.Log ("afro hit " + otherObj.gameObject.ToString ());
 
 		if (otherObj.gameObject.tag == "AfroClone") {
 			Destroy (otherObj.gameObject);
-			transform.localScale = transform.localScale + new Vector3 (5f, 5f, 0f);
+			transform.localScale = transform.localScale + new Vector3 (3f, 3f, 0f);
 			score++;
 		} else if (otherObj.gameObject.tag == "SaksiClone") {
 			Destroy (otherObj.gameObject);
-			transform.localScale = transform.localScale - new Vector3 (20f, 20f, 0f);
+			transform.localScale = transform.localScale - new Vector3 (15f, 15f, 0f);
 			score--;
 			saksiHitCounter++;
 			removeLife (saksiHitCounter);
@@ -88,6 +121,20 @@ public class AfroBehaviour : MonoBehaviour {
 	{
 		PlayerPrefs.SetInt ("endScore", score);
 		Application.LoadLevel ("End_scene");
+	}
+
+	void teleportToRightEdge()
+	{
+		y = transform.position.y;
+		rightEdge = new Vector3 (1150, y, 0);
+		transform.position = rightEdge;
+	}
+
+	void teleportToLeftEdge()
+	{
+		y = transform.position.y;
+		leftEdge = new Vector3 (0, y, 0);
+		transform.position = leftEdge;
 	}
 
 }

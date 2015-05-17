@@ -17,7 +17,7 @@ public class Score : MonoBehaviour {
 		//tarkistaa onko pistemäärä riittävän suuri tilastolle pääsyyn, jos on
 		//pitää canvas enabloida
 
-		scoreText.text = "" + score;
+		scoreText.text = "Score: " + score;
 	}
 	
 	void Update()
