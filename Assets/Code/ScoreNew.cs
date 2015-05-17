@@ -4,11 +4,11 @@ using System.Collections;
 public class ScoreNew : MonoBehaviour {
 	string key;
 	int keyscore;
-	Hashtable test;
 	int lowestScore;
+
 	// Use this for initialization
 	void Start () {
-		test = new Hashtable();
+
 		ArrayList list = new ArrayList ();
 		int score = PlayerPrefs.GetInt ("endScore");
 
