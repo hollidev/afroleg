@@ -12,6 +12,7 @@ public class SaksiBehaviour : MonoBehaviour {
 	float pos;
 	float mass;
 	float force;
+	float scaleMultiplier;
 	
 	void Start () {
 		scale = platform.transform.localScale.x;
@@ -25,17 +26,18 @@ public class SaksiBehaviour : MonoBehaviour {
 
 		updateCounter ++;
 		
-		if (updateCounter % 10 == 0) {
+		if (updateCounter % 200 == 0) {
 			Transform obj = Instantiate(saksi);
 			GameObject saksiClone = obj.gameObject;
 			rb = saksiClone.GetComponent<Rigidbody2D>();
 			force = Random.Range (1000f,22000f);
+			scaleMultiplier = Random.Range (0f,2f);
+				Debug.Log ("multiplier " + scaleMultiplier);
 			rb.AddForce(Vector3.down * force);
+			saksiClone.transform.localScale += saksiClone.transform.localScale*scaleMultiplier;
 			saksiClone.tag = "SaksiClone";
 			pos = Random.Range (0, scale);
 			saksiClone.transform.position = new Vector3 (pos,568f);
-			Debug.Log ("saksiclone created");
-
 		}
 		}
 
