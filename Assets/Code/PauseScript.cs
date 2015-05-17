@@ -44,17 +44,26 @@ public class PauseScript : MonoBehaviour {
 
 	public void ResumeButton(){
 		pauseCanvas.enabled = false;
+		Time.timeScale = 1;
 		seis = false;
-		Debug.Log("resumen lopussa");
+		//temp = Time.timeScale;
+		//Debug.Log(temp);
+		//Debug.Log("paluu peliin pausista resume napilla");
 	}
 
 	public void RestartButton(){
 		pauseCanvas.enabled = false;
+		Time.timeScale = 1;
+		seis = false;
 		Application.LoadLevel("eka");
+		//Debug.Log ("restart game, komento pauselta");
 	}
 
 	public void MainmenuButton(){
+		Time.timeScale = 1;
+		seis = false;
 		Application.LoadLevel("Start_scene");
+		//Debug.Log("siirrytään main menuun pausen napista");
 	}
 
 

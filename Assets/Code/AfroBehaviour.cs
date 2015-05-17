@@ -4,7 +4,7 @@ using System.Collections;
 
 public class AfroBehaviour : MonoBehaviour {
 	public Text scoreText;
-	float speed = 200.0f;
+	float speed = 300.0f;
 	int score;
 	private Animator animator;
 	// Use this for initialization
